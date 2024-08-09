@@ -1,0 +1,53 @@
+{
+  "name": "coding-test-express-api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "api/index.js",
+  "scripts": {
+    "lint": "eslint api --ext .mjs,.js,.jsx,.ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "blocklet dev",
+    "start": "NODE_ENV=development nodemon api/index.js -w api",
+    "clean": "node scripts/build-clean.mjs",
+    "bundle": "npm run clean && blocklet bundle --compact --create-release",
+    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
+    "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
+    "deploy:child": "npm run bundle && blocklet deploy .blocklet/bundle --app-did=z2qa4cUfaJvGZ6URxookBNpgFuixFWMmNFUG8",
+    "dev:child": "blocklet dev --component --app-did=z2qa4cUfaJvGZ6URxookBNpgFuixFWMmNFUG8",
+    "prepare": "npx simple-git-hooks"
+  },
+  "lint-staged": {
+    "*.{mjs,js,ts}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.{css,less,scss,json,graphql}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@arcblock/did-auth-storage-nedb": "^1.7.1",
+    "@blocklet/sdk": "^1.16.29",
+    "@ocap/client": "^1.18.128",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@arcblock/eslint-config-base": "^0.3.2",
+    "bumpp": "^9.4.1",
+    "eslint": "^8.57.0",
+    "lint-staged": "^15.2.7",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.7",
+    "simple-git-hooks": "^2.11.1",
+    "zx": "^8.1.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  }
+}
