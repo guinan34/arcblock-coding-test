@@ -1,79 +1,42 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.small-input {
+  border: 0.5px solid #ccc; /* 初始边框 */
+  border-radius: 4px; /* 圆角边框 */
+  padding: 4px 8px; /* 内边距 */
+  opacity: 0.5; /* 边框变淡 */
+  transition:
+    border-color 0.3s,
+    opacity 0.3s; /* 过渡效果 */
+  border-width: 0.3px;
+  width: 130px;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.small-input:focus {
+  border-color: #000; /* 获取焦点时的边框颜色 */
+  opacity: 1; /* 获取焦点时边框不再变淡 */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.right-aligned-button {
+  float: right;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.button-border {
+  border: 1px solid transparent; /* 设置边框透明 */
+  background-color: #edc40e; /* 按钮背景颜色 */
+  color: white; /* 文字颜色 */
+  padding: 0px 3px; /* 内边距 */
+  text-align: center; /* 文字居中 */
+  display: inline-block; /* 使按钮成为内联块级元素 */
+  font-size: 16px; /* 字体大小 */
+  cursor: pointer; /* 鼠标光标变为指针形状 */
+  border-radius: 3px; /* 圆角半径 */
+  transition: 0.3s; /* 过渡动画 */
 }

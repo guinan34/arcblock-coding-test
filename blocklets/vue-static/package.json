@@ -10,7 +10,7 @@
     "serve": "vite preview",
     "clean": "node scripts/build-clean.mjs",
     "bundle": "npm run clean && vite build && blocklet bundle --zip --create-release",
-    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
+    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle --app-id did:abt:zNKguVZ4ex1Z2BkncTD1SJiGp54GmnhoRHXe",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "prepare": "npx simple-git-hooks"
   },
@@ -41,5 +41,8 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
