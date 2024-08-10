@@ -34,9 +34,12 @@ yarn deploy:child --mount-point /api/
 * User Profile page
 ![userProfile](images/screenshot-2.png)
 
-* Edit mode and format validation
-![validation](images/screenshot-3.png)
+* Edit mode 
+![edit](images/screenshot-3.png)
+
+* Edit mode with data validation
+![validation](images/screenshot-4.png)
 
 * When using phone
-![phone](images/screenshot-4.png)
+![phone](images/screenshot-5.png)
 
