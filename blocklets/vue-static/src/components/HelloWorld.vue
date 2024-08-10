@@ -159,12 +159,12 @@
 export default {
   data() {
     return {
-      userinfos: {},
-      isEditable: false,
-      editedContent: {},
-      error: false,
-      emailError: false,
-      phoneError: false,
+      userinfos: {} /* User data api assigned to it  */,
+      isEditable: false /* Is the content can be edited  */,
+      editedContent: {} /* Temprarory variable for storing the edited content */,
+      error: false /* Is the save button can be clicked */,
+      emailError: false /* Is the email format validation passed */,
+      phoneError: false /* Is the phone format validation passed */,
     };
   },
   created() {
