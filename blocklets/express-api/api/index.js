@@ -5,6 +5,7 @@ const usersRouter = require('./users');
 const app = express();
 const port = process.env.BLOCKLET_PORT || process.env.PORT || 3030;
 
+// Cross-domain configuration
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -16,7 +17,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Use user routes
+// Din't use /api as we mounted /api/ in blocket server, which will remove prefix as well .
 app.use('/', usersRouter);
 
 // Start server
