@@ -14,7 +14,7 @@
     "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "deploy:child": "npm run bundle && blocklet deploy .blocklet/bundle --app-did=zNKguVZ4ex1Z2BkncTD1SJiGp54GmnhoRHXe",
-    "dev:child": "blocklet dev --component --app-did=zNKguVZ4ex1Z2BkncTD1SJiGp54GmnhoRHXe",
+    "dev:child": "blocklet dev --component --app-did=zNKgSaPy3Sw8Ds91TT5LNTzay4Bc1ng5cTyo",
     "prepare": "npx simple-git-hooks"
   },
   "lint-staged": {
