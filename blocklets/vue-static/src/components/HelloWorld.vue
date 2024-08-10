@@ -15,7 +15,7 @@
                     border-bottom-right-radius: 0.5rem;
                   ">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                    src="../assets/nabixiaoxin-touming.png"
                     alt="Avatar"
                     class="img-fluid my-5"
                     style="width: 80px" />
@@ -83,7 +83,7 @@
                     border-bottom-right-radius: 0.5rem;
                   ">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                    src="../assets/nabixiaoxin-touming.png"
                     alt="Avatar"
                     class="img-fluid my-5"
                     style="width: 80px" />
@@ -94,7 +94,7 @@
                 <div class="col-md-8">
                   <div class="card-body p-4">
                     <button @click="toggleEdit" class="right-aligned-button button-border">取消</button>
-                    <button @click="save" class="right-aligned-button button-border">保存</button>
+                    <button :disabled="error" @click="save" class="right-aligned-button button-border">保存</button>
                     <h6>Information</h6>
 
                     <hr class="mt-0 mb-4" />
@@ -102,14 +102,26 @@
                       <div class="col-6 mb-3">
                         <h6>Email</h6>
                         <p class="text-muted">
-                          <input type="text" v-model="editedContent.email" placeholder="email" class="small-input" />
+                          <input
+                            type="text"
+                            v-model="editedContent.email"
+                            placeholder="email"
+                            class="small-input"
+                            @input="validateInput" />
                         </p>
+                        <p v-if="emailError" :style="{ color: 'red' }">邮箱格式不正确</p>
                       </div>
                       <div class="col-6 mb-3">
                         <h6>Phone</h6>
                         <p class="text-muted">
-                          <input type="text" v-model="editedContent.phone" placeholder="phone" class="small-input" />
+                          <input
+                            type="text"
+                            v-model="editedContent.phone"
+                            placeholder="phone"
+                            class="small-input"
+                            @input="validateInput" />
                         </p>
+                        <p v-if="phoneError" :style="{ color: 'red' }">手机号不正确</p>
                       </div>
                     </div>
                     <h6>Password</h6>
@@ -150,6 +162,9 @@ export default {
       userinfos: {},
       isEditable: false,
       editedContent: {},
+      error: false,
+      emailError: false,
+      phoneError: false,
     };
   },
   created() {
@@ -167,10 +182,29 @@ export default {
     },
     toggleEdit() {
       this.isEditable = !this.isEditable;
+
+      /* reset error value when user click cancel or edit */
+      this.phoneError = false;
+      this.emailError = false;
+      this.error = false;
+
+      /* assign original user data to a new variable for user editing */
       if (this.isEditable) {
         this.editedContent = this.userinfos;
       } else {
+        /* reset user data as v-model binded the editted data*/
         this.fetchUserInfo();
+      }
+    },
+    validateInput() {
+      this.emailError = !this.editedContent.email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/);
+      this.phoneError = !this.editedContent.phone.match(/^1[3-9]\d{9}$/);
+
+      /* if one of the format vadation is false, then can't save the page */
+      if (this.emailError || this.phoneError) {
+        this.error = true;
+      } else {
+        this.error = false;
       }
     },
     async save() {
