@@ -143,12 +143,12 @@ export default {
     };
   },
   created() {
-    this.fetchUserName();
+    this.fetchUserInfo();
   },
   methods: {
-    async fetchUserName() {
+    async fetchUserInfo() {
       try {
-        const response = await fetch('https://bbqaxbm4oyz6gqajgp47ysedazrtub3jqxgooemxdce.did.abtnet.io/users/1');
+        const response = await fetch('/api/users/1');
         const data = await response.json();
         this.userinfos = data;
       } catch (error) {
@@ -173,7 +173,7 @@ export default {
         password: this.userinfos.password,
       };
       try {
-        await fetch('https://bbqaxbm4oyz6gqajgp47ysedazrtub3jqxgooemxdce.did.abtnet.io/users/1', {
+        await fetch('/api/users/1', {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
