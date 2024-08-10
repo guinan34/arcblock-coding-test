@@ -4,11 +4,16 @@
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-lg-6 mb-4 mb-lg-0">
-            <div class="card mb-3" style="border-radius: 0.5rem">
+            <div class="card mb-3 rounded-box">
               <div class="row g-0">
                 <div
                   class="col-md-4 gradient-custom text-center text-white"
-                  style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem">
+                  style="
+                    border-top-left-radius: 0.5rem;
+                    border-bottom-left-radius: 0.5rem;
+                    border-top-right-radius: 0.5rem;
+                    border-bottom-right-radius: 0.5rem;
+                  ">
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                     alt="Avatar"
@@ -67,11 +72,16 @@
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-lg-6 mb-4 mb-lg-0">
-            <div class="card mb-3" style="border-radius: 0.5rem">
+            <div class="card mb-3 rounded-box">
               <div class="row g-0">
                 <div
                   class="col-md-4 gradient-custom text-center text-white"
-                  style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem">
+                  style="
+                    border-top-left-radius: 0.5rem;
+                    border-bottom-left-radius: 0.5rem;
+                    border-top-right-radius: 0.5rem;
+                    border-bottom-right-radius: 0.5rem;
+                  ">
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                     alt="Avatar"
@@ -160,7 +170,7 @@ export default {
       if (this.isEditable) {
         this.editedContent = this.userinfos;
       } else {
-        window.location.reload();
+        this.fetchUserInfo();
       }
     },
     async save() {
