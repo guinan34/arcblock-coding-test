@@ -9,7 +9,7 @@
   background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
 }
 .small-input {
-  border: 0.5px solid #ccc; /* 初始边框 */
+  border: 0.5px solid #0a0909; /* 初始边框 */
   border-radius: 4px; /* 圆角边框 */
   padding: 4px 8px; /* 内边距 */
   opacity: 0.5; /* 边框变淡 */
@@ -45,4 +45,36 @@
   border: 1px solid #000;
   padding: 10px;
   border-radius: 15px; /* 设置border-radius */
+}
+
+.custom-hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* 或者其他你想要的宽度 */
+}
+
+.icon-container {
+  display: inline-flex; /* 使用inline-flex以避免占据全部宽度 */
+  align-items: center; /* 垂直居中 */
+
+  margin-top: 20px;
+}
+
+.left-icon {
+  justify-content: flex-start; /* 图标靠左 */
+}
+
+.centered-icon {
+  justify-content: center; /* 图标居中 */
+}
+
+.right-icon {
+  justify-content: flex-end; /* 图标靠右 */
+}
+
+.icon {
+  margin-right: 15px; /* 设置图标间距 */
+}
+.auto-indent {
+  text-indent: 24px; /* 设置文本首行缩进2个字符的宽度 */
 }

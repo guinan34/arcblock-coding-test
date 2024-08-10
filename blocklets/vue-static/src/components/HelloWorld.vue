@@ -3,7 +3,7 @@
     <section class="vh-100" style="background-color: #f4f5f7">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="col col-lg-12 mb-4 mb-lg-0">
             <div class="card mb-3 rounded-box">
               <div class="row g-0">
                 <div
@@ -20,7 +20,32 @@
                     class="img-fluid my-5"
                     style="width: 80px" />
                   <h5>{{ userinfos.name }}</h5>
-                  <p>Devops engineer</p>
+
+                  <!-- 左对齐图标 -->
+                  <div class="icon-container left-icon icon">
+                    <p><img src="../assets/location.svg" alt="icon" style="width: 24px; height: 24px" />成都</p>
+                  </div>
+
+                  <div class="icon-container centered-icon icon">
+                    <p><img src="../assets/job.svg" alt="icon" style="width: 18px; height: 18px" /> Devops engineer</p>
+                  </div>
+
+                  <!-- 右对齐图标 -->
+                  <div class="icon-container right-icon icon">
+                    <p>
+                      <img src="../assets/hobby.svg" alt="icon" style="width: 18px; height: 18px" />The black myth
+                      wukong
+                    </p>
+                  </div>
+
+                  <hr class="custom-hr" />
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>About me</h6>
+                    </div>
+                    <p class="auto-indent">This is a long story about myself. blah blah blah.</p>
+                  </div>
+
                   <i class="far fa-edit mb-5"></i>
                 </div>
                 <div class="col-md-8">
@@ -39,8 +64,73 @@
                         <p class="text-muted">{{ userinfos.phone }}</p>
                       </div>
                     </div>
-                    <h6>Password</h6>
-                    <p class="text-muted">{{ userinfos.password }}</p>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Password</h6>
+                        <p class="text-muted">{{ userinfos.password }}</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Skills</h6>
+                        <p class="text-muted">Python kubernetes Prometheus</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Self-introduction</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
                     <hr class="mt-0 mb-4" />
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
@@ -71,7 +161,7 @@
     <section class="vh-100" style="background-color: #f4f5f7">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="col col-lg-12 mb-4 mb-lg-0">
             <div class="card mb-3 rounded-box">
               <div class="row g-0">
                 <div
@@ -88,7 +178,32 @@
                     class="img-fluid my-5"
                     style="width: 80px" />
                   <h5><input type="text" v-model="editedContent.name" placeholder="name" class="small-input" /></h5>
-                  <p>Devops engineer</p>
+
+                  <!-- 左对齐图标 -->
+                  <div class="icon-container left-icon icon">
+                    <p><img src="../assets/location.svg" alt="icon" style="width: 24px; height: 24px" />成都</p>
+                  </div>
+
+                  <div class="icon-container centered-icon icon">
+                    <p><img src="../assets/job.svg" alt="icon" style="width: 18px; height: 18px" /> Devops engineer</p>
+                  </div>
+
+                  <!-- 右对齐图标 -->
+                  <div class="icon-container right-icon icon">
+                    <p>
+                      <img src="../assets/hobby.svg" alt="icon" style="width: 18px; height: 18px" />The black myth
+                      wukong
+                    </p>
+                  </div>
+
+                  <hr class="custom-hr" />
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>About me</h6>
+                    </div>
+
+                    <p class="auto-indent">This is a long story about myself. blah blah blah.</p>
+                  </div>
                   <i class="far fa-edit mb-5"></i>
                 </div>
                 <div class="col-md-8">
@@ -98,6 +213,7 @@
                     <h6>Information</h6>
 
                     <hr class="mt-0 mb-4" />
+
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
                         <h6>Email</h6>
@@ -124,10 +240,79 @@
                         <p v-if="phoneError" :style="{ color: 'red' }">手机号不正确</p>
                       </div>
                     </div>
-                    <h6>Password</h6>
-                    <p class="text-muted">
-                      <input type="text" v-model="editedContent.password" placeholder="password" class="small-input" />
-                    </p>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Password</h6>
+                        <p class="text-muted">
+                          <input
+                            type="text"
+                            v-model="editedContent.password"
+                            placeholder="password"
+                            class="small-input" />
+                        </p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Skills</h6>
+                        <p class="text-muted">Python kubernetes Prometheus</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Self-introduction</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Placeholder</h6>
+                        <p class="text-muted">Nice to meet you.</p>
+                      </div>
+                    </div>
+
                     <hr class="mt-0 mb-4" />
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
