@@ -2,6 +2,7 @@
 * node version: v20.10.0
 * blocklect version: v1.16.29
 * app components: Vue + Express 
+* database: sqlite
 * mount path: 
   - vue: /
   - express: /api/
