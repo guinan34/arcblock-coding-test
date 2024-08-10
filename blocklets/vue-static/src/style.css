@@ -40,3 +40,9 @@
   border-radius: 3px; /* 圆角半径 */
   transition: 0.3s; /* 过渡动画 */
 }
+
+.rounded-box {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 15px; /* 设置border-radius */
+}
